@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Dhiman Codes | High-Performance Web &amp; ERP Engineering</title>
+  <meta content="Custom web development and tailored ERP solutions engineered for Indian businesses and visionary institutions. Fast, scalable, and secure digital infrastructure." name="description" />
+  <style>
+    @layer base { 
+      html, body { margin: 0; padding: 0; background-color: #050505; color: #e5e2e1; } 
+      body { overscroll-behavior: none; } 
+      main > :first-child { margin-top: 0 !important; } 
+      main > :last-child { margin-bottom: 0 !important; } 
+    } 
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #050505; }
+    ::-webkit-scrollbar-thumb { background: #222222; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #353534; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "secondary-fixed-dim": "#c0c7d3",
+            "on-secondary": "#2a313b",
+            "surface-variant": "#353534",
+            "surface-bright": "#3a3939",
+            "on-secondary-fixed": "#151c25",
+            "inverse-on-surface": "#313030",
+            "surface-container-highest": "#353534",
+            "on-error-container": "#ffdad6",
+            "surface-tint": "#c4c7ca",
+            "inverse-primary": "#5c5f62",
+            "error-container": "#93000a",
+            "tertiary": "#ffffff",
+            "on-tertiary-fixed-variant": "#004c69",
+            "surface-container": "#161616",
+            "on-tertiary": "#00354a",
+            "outline": "#8f9194",
+            "secondary-fixed": "#dce3f0",
+            "on-surface-variant": "#c5c6ca",
+            "on-error": "#690005",
+            "on-background": "#e5e2e1",
+            "tertiary-fixed-dim": "#7bd0ff",
+            "secondary-container": "#404752",
+            "on-secondary-container": "#afb5c2",
+            "primary-fixed": "#e0e2e6",
+            "on-primary": "#2d3134",
+            "tertiary-fixed": "#c4e7ff",
+            "on-tertiary-fixed": "#001e2c",
+            "surface-container-high": "#222222",
+            "outline-variant": "#44474a",
+            "on-tertiary-container": "#006c93",
+            "surface": "#050505",
+            "inverse-surface": "#e5e2e1",
+            "on-primary-fixed": "#191c1f",
+            "background": "#050505",
+            "tertiary-container": "#c4e7ff",
+            "on-secondary-fixed-variant": "#404752",
+            "surface-container-low": "#0d0d0d",
+            "on-primary-container": "#626568",
+            "secondary": "#c0c7d3",
+            "primary-container": "#e0e2e6",
+            "on-primary-fixed-variant": "#44474a",
+            "on-surface": "#e5e2e1",
+            "primary-fixed-dim": "#c4c7ca",
+            "primary": "#ffffff",
+            "error": "#ffb4ab",
+            "surface-dim": "#050505",
+            "surface-container-lowest": "#080808"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "space-md": "1.5rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.75rem",
+            "space-xs": "0.25rem",
+            "space-xl": "6rem",
+            "space-lg": "3rem",
+            "margin": "2rem"
+          },
+          fontFamily: {
+            "headline-sm": ["Inter", "sans-serif"],
+            "headline-md": ["Inter", "sans-serif"],
+            "headline-xl": ["Inter", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "headline-lg": ["Inter", "sans-serif"],
+            "label-md": ["JetBrains Mono", "monospace"],
+            "label-sm": ["JetBrains Mono", "monospace"],
+            "body-sm": ["Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet" />
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-primary selection:text-on-primary">
+
+  <!-- Ambient Glow Background -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute -top-[40%] -left-[20%] w-[70vw] h-[70vw] rounded-full bg-gradient-to-br from-tertiary-container/10 to-transparent blur-[120px]"></div>
+    <div class="absolute top-[30%] -right-[20%] w-[60vw] h-[60vw] rounded-full bg-gradient-to-bl from-secondary-container/10 to-transparent blur-[140px]"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="fixed top-space-md left-0 right-0 z-50 px-gutter">
+    <div class="max-w-[1440px] mx-auto h-16 bg-surface/60 backdrop-blur-[40px] rounded-2xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.32)] flex items-center justify-between px-space-md">
+      <a class="flex items-center gap-space-sm" href="#">
+        <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-sm font-bold shadow-[0_0_12px_rgba(255,255,255,0.4)]">D</div>
+        <span class="font-headline-sm tracking-tight font-bold text-on-surface">Dhiman Codes</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-space-md">
+        <a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#services">Services</a>
+        <a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#work">Work</a>
+        <a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#process">Process</a>
+        <a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#calculator">Calculator</a>
+        <a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#pricing">Pricing</a>
+        <a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#faq">FAQ</a>
+      </nav>
+      <div class="flex items-center gap-space-sm">
+        <a class="hidden sm:flex items-center justify-center px-space-md h-10 rounded-xl bg-gradient-to-r from-primary-fixed to-primary text-on-primary font-body-md font-semibold hover:opacity-90 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]" href="#get-started">Get Started</a>
+        <a class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center border border-white/10 text-emerald-400 hover:text-white transition-all" href="https://wa.me/919876543210" target="_blank" title="Chat on WhatsApp">
+          <span class="material-symbols-outlined text-[18px]">chat</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 w-full pt-space-xl bg-transparent min-h-screen">
+    <div class="flex flex-col w-full text-on-surface">
+
+      <!-- Hero Section -->
+      <section class="relative min-h-[921px] flex flex-col justify-center items-center px-gutter py-space-xl max-w-[1440px] mx-auto text-center overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-primary/10 via-tertiary-container/10 to-secondary-container/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="inline-flex items-center gap-2 px-space-md py-2 rounded-full bg-surface-container-high/80 border border-white/10 backdrop-blur-[20px] mb-space-md shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+          <span class="text-label-md text-on-surface font-semibold">🚀 Custom Web Development &amp; ERP Solutions for Indian Businesses</span>
+        </div>
+        <h1 class="font-headline-xl text-[42px] md:text-[64px] tracking-tight max-w-5xl mb-space-md text-on-surface leading-tight">
+          We Build Websites That Load Instantly, Drive Sales, and <br/>
+          <span class="bg-gradient-to-r from-primary via-secondary-fixed to-tertiary-fixed-dim bg-clip-text text-transparent" id="typing-text">Scale Effortlessly</span>
+        </h1>
+        <p class="font-body-lg text-on-surface-variant max-w-2xl mb-space-lg">
+          We engineer elite digital infrastructure, lightning-fast web applications, and tailor-made enterprise resource planning (ERP) software designed to dominate search rankings and maximize profitability.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-space-sm mb-space-xl">
+          <a class="px-space-lg h-14 rounded-xl bg-gradient-to-r from-primary-fixed to-primary text-on-primary font-body-lg font-semibold flex items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.25)] hover:scale-105 transition-transform" href="#pricing">
+            Start Your Project →
+          </a>
+          <a class="px-space-lg h-14 rounded-xl bg-surface-container-high/80 backdrop-blur-[20px] border border-white/10 text-on-surface font-body-lg font-semibold flex items-center justify-center hover:bg-surface-container-highest transition-all" href="#work">
+            View Our Work
+          </a>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-space-md w-full max-w-5xl mx-auto">
+          <div class="p-space-md rounded-2xl bg-surface-container/60 backdrop-blur-[40px] border border-white/10 flex flex-col items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+            <span class="font-headline-lg font-bold text-on-surface mb-1">70+</span>
+            <span class="text-label-md text-outline uppercase tracking-wider">Projects Delivered</span>
+          </div>
+          <div class="p-space-md rounded-2xl bg-surface-container/60 backdrop-blur-[40px] border border-white/10 flex flex-col items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+            <span class="font-headline-lg font-bold text-on-surface mb-1">99%</span>
+            <span class="text-label-md text-outline uppercase tracking-wider">Client Satisfaction</span>
+          </div>
+          <div class="p-space-md rounded-2xl bg-surface-container/60 backdrop-blur-[40px] border border-white/10 flex flex-col items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+            <span class="font-headline-lg font-bold text-on-surface mb-1">15+</span>
+            <span class="text-label-md text-outline uppercase tracking-wider">Cities Served</span>
+          </div>
+          <div class="p-space-md rounded-2xl bg-surface-container/60 backdrop-blur-[40px] border border-white/10 flex flex-col items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+            <span class="font-headline-lg font-bold text-on-surface mb-1">4+</span>
+            <span class="text-label-md text-outline uppercase tracking-wider">Years Experience</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Proof Band -->
+      <section class="py-space-lg bg-surface-container-lowest border-y border-white/5 overflow-hidden">
+        <div class="max-w-[1440px] mx-auto px-gutter text-center mb-space-md">
+          <span class="text-label-md uppercase tracking-wider text-outline font-semibold">TRUSTED BY VISIONARY INSTITUTIONS &amp; ENTERPRISES</span>
+        </div>
+        <div class="max-w-[1440px] mx-auto px-gutter grid grid-cols-1 md:grid-cols-3 gap-space-md">
+          <div class="p-space-md rounded-xl bg-surface-container/40 border border-white/5 backdrop-blur-[20px] flex items-center justify-center gap-space-sm text-center cursor-pointer hover:border-white/20 transition-all" onclick="openProject('sakshit')">
+            <span class="material-symbols-outlined text-primary text-[28px]">bolt</span>
+            <div class="text-left">
+              <span class="font-headline-sm text-on-surface font-semibold block text-base">Sakshit Electronics &amp; Library</span>
+              <span class="text-label-sm text-outline">Retail ERP &amp; Billing</span>
+            </div>
+          </div>
+          <div class="p-space-md rounded-xl bg-surface-container/40 border border-white/5 backdrop-blur-[20px] flex items-center justify-center gap-space-sm text-center cursor-pointer hover:border-white/20 transition-all" onclick="openProject('bright')">
+            <span class="material-symbols-outlined text-primary text-[28px]">school</span>
+            <div class="text-left">
+              <span class="font-headline-sm text-on-surface font-semibold block text-base">Bright Eyes Welfare Education</span>
+              <span class="text-label-sm text-outline">Education Foundation ERP</span>
+            </div>
+          </div>
+          <div class="p-space-md rounded-xl bg-surface-container/40 border border-white/5 backdrop-blur-[20px] flex items-center justify-center gap-space-sm text-center cursor-pointer hover:border-white/20 transition-all" onclick="openProject('rural')">
+            <span class="material-symbols-outlined text-primary text-[28px]">domain</span>
+            <div class="text-left">
+              <span class="font-headline-sm text-on-surface font-semibold block text-base">Rural Urban Skill Development</span>
+              <span class="text-label-sm text-outline">28 Skill Center Branches</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Grid -->
+      <section class="py-space-xl max-w-[1440px] mx-auto px-gutter w-full" id="services">
+        <div class="text-center max-w-3xl mx-auto mb-space-lg">
+          <span class="text-label-md uppercase tracking-wider text-outline mb-space-xs block">Engineering Excellence</span>
+          <h2 class="font-headline-lg text-on-surface mb-space-sm">Designed for High Performance</h2>
+          <p class="font-body-lg text-on-surface-variant">Every line of code is optimized for extreme velocity, unbreakable security, and unmatched user conversion.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+          <div class="p-space-lg rounded-2xl bg-surface-container/50 border border-white/10 backdrop-blur-[40px] hover:border-white/20 transition-all group flex flex-col justify-between shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center mb-space-md text-primary border border-white/10 group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-[24px]">electric_bolt</span>
+              </div>
+              <h3 class="font-headline-sm text-on-surface mb-space-xs">Lightning Fast</h3>
+              <p class="font-body-md text-on-surface-variant">Optimized assets, zero-latency caching, and edge delivery guarantee sub-second load times worldwide.</p>
+            </div>
+            <div class="mt-space-lg pt-space-md border-t border-white/5 flex items-center text-label-md text-primary font-semibold"><span>0.2s Avg Response</span></div>
+          </div>
+          <div class="p-space-lg rounded-2xl bg-surface-container/50 border border-white/10 backdrop-blur-[40px] hover:border-white/20 transition-all group flex flex-col justify-between shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center mb-space-md text-primary border border-white/10 group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-[24px]">palette</span>
+              </div>
+              <h3 class="font-headline-sm text-on-surface mb-space-xs">Stunning UI/UX</h3>
+              <p class="font-body-md text-on-surface-variant">Bespoke cyber-minimalist aesthetics, fluid motion, and high-end glassmorphic visual hierarchy.</p>
+            </div>
+            <div class="mt-space-lg pt-space-md border-t border-white/5 flex items-center text-label-md text-primary font-semibold"><span>Award-Winning Design</span></div>
+          </div>
+          <div class="p-space-lg rounded-2xl bg-surface-container/50 border border-white/10 backdrop-blur-[40px] hover:border-white/20 transition-all group flex flex-col justify-between shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center mb-space-md text-primary border border-white/10 group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-[24px]">smartphone</span>
+              </div>
+              <h3 class="font-headline-sm text-on-surface mb-space-xs">Mobile-First</h3>
+              <p class="font-body-md text-on-surface-variant">Impeccable fluid responsiveness across smartphones, tablets, and ultra-wide desktop monitors.</p>
+            </div>
+            <div class="mt-space-lg pt-space-md border-t border-white/5 flex items-center text-label-md text-primary font-semibold"><span>100% Responsive</span></div>
+          </div>
+          <div class="p-space-lg rounded-2xl bg-surface-container/50 border border-white/10 backdrop-blur-[40px] hover:border-white/20 transition-all group flex flex-col justify-between shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center mb-space-md text-primary border border-white/10 group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-[24px]">trending_up</span>
+              </div>
+              <h3 class="font-headline-sm text-on-surface mb-space-xs">SEO Optimized</h3>
+              <p class="font-body-md text-on-surface-variant">Advanced technical architecture, structured schema, and flawless Core Web Vitals for top rankings.</p>
+            </div>
+            <div class="mt-space-lg pt-space-md border-t border-white/5 flex items-center text-label-md text-primary font-semibold"><span>Rank #1 on Google</span></div>
+          </div>
+          <div class="p-space-lg rounded-2xl bg-surface-container/50 border border-white/10 backdrop-blur-[40px] hover:border-white/20 transition-all group flex flex-col justify-between shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center mb-space-md text-primary border border-white/10 group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-[24px]">shield_lock</span>
+              </div>
+              <h3 class="font-headline-sm text-on-surface mb-space-xs">Secure &amp; Reliable</h3>
+              <p class="font-body-md text-on-surface-variant">Bank-grade encryption, automated daily backups, and robust vulnerability mitigation protocols.</p>
+            </div>
+            <div class="mt-space-lg pt-space-md border-t border-white/5 flex items-center text-label-md text-primary font-semibold"><span>99.9% Uptime SLA</span></div>
+          </div>
+          <div class="p-space-lg rounded-2xl bg-surface-container/50 border border-white/10 backdrop-blur-[40px] hover:border-white/20 transition-all group flex flex-col justify-between shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center mb-space-md text-primary border border-white/10 group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-[24px]">dns</span>
+              </div>
+              <h3 class="font-headline-sm text-on-surface mb-space-xs">ERP &amp; Management Systems</h3>
+              <p class="font-body-md text-on-surface-variant">Custom enterprise resource planning software to automate inventory, billing, student records, and workflows.</p>
+            </div>
+            <div class="mt-space-lg pt-space-md border-t border-white/5 flex items-center text-label-md text-primary font-semibold"><span>Custom Workflow Automation</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4-Step Process -->
+      <section class="py-space-xl bg-surface-container-lowest border-y border-white/5" id="process">
+        <div class="max-w-[1440px] mx-auto px-gutter">
+          <div class="text-center max-w-3xl mx-auto mb-space-xl">
+            <span class="text-label-md uppercase tracking-wider text-outline mb-space-xs block">Methodology</span>
+            <h2 class="font-headline-lg text-on-surface mb-space-sm">Our 4-Step Engineering Lifecycle</h2>
+            <p class="font-body-lg text-on-surface-variant">From concept to deployment, we maintain rigorous engineering standards.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-space-md relative">
+            <div class="p-space-lg rounded-2xl bg-surface-container/40 border border-white/10 backdrop-blur-[20px] relative">
+              <div class="text-label-md text-primary font-bold mb-space-md">01 / DISCOVERY</div>
+              <h3 class="font-headline-sm text-on-surface mb-space-xs">Strategic Blueprint</h3>
+              <p class="font-body-sm text-on-surface-variant">Deep-dive consultation to define core business objectives, user personas, and technical architecture.</p>
+            </div>
+            <div class="p-space-lg rounded-2xl bg-surface-container/40 border border-white/10 backdrop-blur-[20px] relative">
+              <div class="text-label-md text-primary font-bold mb-space-md">02 / DESIGN</div>
+              <h3 class="font-headline-sm text-on-surface mb-space-xs">Visual Architecture</h3>
+              <p class="font-body-sm text-on-surface-variant">Wireframing high-converting UI/UX layouts with premium typography, glassmorphic styling, and brand harmony.</p>
+            </div>
+            <div class="p-space-lg rounded-2xl bg-surface-container/40 border border-white/10 backdrop-blur-[20px] relative">
+              <div class="text-label-md text-primary font-bold mb-space-md">03 / DEVELOP</div>
+              <h3 class="font-headline-sm text-on-surface mb-space-xs">Robust Engineering</h3>
+              <p class="font-body-sm text-on-surface-variant">Writing clean, modular code with modern frameworks, secure databases, and seamless ERP integrations.</p>
+            </div>
+            <div class="p-space-lg rounded-2xl bg-surface-container/40 border border-white/10 backdrop-blur-[20px] relative">
+              <div class="text-label-md text-primary font-bold mb-space-md">04 / LAUNCH</div>
+              <h3 class="font-headline-sm text-on-surface mb-space-xs">Deployment &amp; Growth</h3>
+              <p class="font-body-sm text-on-surface-variant">Rigorous QA testing, speed optimization, search engine submission, and ongoing maintenance.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Showcase -->
+      <section class="py-space-xl max-w-[1440px] mx-auto px-gutter w-full" id="work">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg">
+          <div>
+            <span class="text-label-md uppercase tracking-wider text-outline mb-space-xs block">Featured Projects</span>
+            <h2 class="font-headline-lg text-on-surface">Proven Enterprise Impact</h2>
+          </div>
+          <p class="font-body-lg text-on-surface-variant max-w-md mt-space-sm md:mt-0">Explore our recent custom web applications and specialized ERP portals built for leading Indian organizations.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+          <!-- Project 1 -->
+          <div class="rounded-2xl bg-surface-container/50 border border-white/10 backdrop-blur-[40px] overflow-hidden group shadow-[0_8px_32px_rgba(0,0,0,0.3)] cursor-pointer" onclick="openProject('sakshit')">
+            <div class="h-64 overflow-hidden relative">
+              <img alt="Sakshit Electronics &amp; Library" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRWfwDt0EpebCXWTDJr3XzjAvy6uzHZw64nqI5KJQ5TtiBE4g4byrxfHJFnfHOeSYQsyMigF7db4wuloWUiBIIQU-7_XTvYtgEkcJuZtrDWFAMmUO2ynEu6rdP504FbXdpxCtpXVBTBy7YZ0WdXnHDQFpy4AzO8qmoAXjjKemv--oNkqrbU0lV5pjxQDMfaSmjVF_KX-HeA31vkflGDvlIodXCiB4fZYR0qWbQ6Lb5LPR-ZDblfv4" />
+              <div class="absolute top-space-sm left-space-sm px-3 py-1 rounded-full bg-surface/80 backdrop-blur-[10px] border border-white/10 text-label-sm font-semibold text-primary">ERP &amp; E-Commerce</div>
+            </div>
+            <div class="p-space-md">
+              <h3 class="font-headline-sm text-on-surface mb-space-xs">Sakshit Electronics &amp; Library</h3>
+              <p class="font-body-sm text-on-surface-variant mb-space-md">Stock Management &amp; Billing by Dixit Sharma</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 rounded bg-surface-container-high text-label-sm text-outline">React</span>
+                <span class="px-2 py-1 rounded bg-surface-container-high text-label-sm text-outline">Node.js</span>
+                <span class="px-2 py-1 rounded bg-surface-container-high text-label-sm text-outline">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="rounded-2xl bg-surface-container/50 border border-white/10 backdrop-blur-[40px] overflow-hidden group shadow-[0_8px_32px_rgba(0,0,0,0.3)] cursor-pointer" onclick="openProject('bright')">
+            <div class="h-64 overflow-hidden relative">
+              <img alt="Bright Eyes Welfare Education Society" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYluS_oYRpCCEad6wxIggn8THzzVYoIKmCdPEB-NBBtv3NJG44QVNV_F6FnK3T25ZuP78ulyEEQMQCYI13tojnaZS23qr-mwIuy6RiHnzI6QOKFcV-V_B8mjfOwxrq8RofU0nhEmXZ_GMvLd6tdei0YoSqcrLK7JvOPnmiY947aP3Q_bLM1KPFvyprAm9Ox3kwKvj6fcOsQDvd52UnGtq-zKSG1YiiAyQX9s9EV3Ngu5rmuhzCmzM" />
+              <div class="absolute top-space-sm left-space-sm px-3 py-1 rounded-full bg-surface/80 backdrop-blur-[10px] border border-white/10 text-label-sm font-semibold text-primary">Education ERP</div>
+            </div>
+            <div class="p-space-md">
+              <h3 class="font-headline-sm text-on-surface mb-space-xs">Bright Eyes Welfare Education Society</h3>
+              <p class="font-body-sm text-on-surface-variant mb-space-md">Education Society Website by Anil Kumar</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 rounded bg-surface-container-high text-label-sm text-outline">Next.js</span>
+                <span class="px-2 py-1 rounded bg-surface-container-high text-label-sm text-outline">Tailwind</span>
+                <span class="px-2 py-1 rounded bg-surface-container-high text-label-sm text-outline">MongoDB</span>
+              </div>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="rounded-2xl bg-surface-container/50 border border-white/10 backdrop-blur-[40px] overflow-hidden group shadow-[0_8px_32px_rgba(0,0,0,0.3)] cursor-pointer" onclick="openProject('rural')">
+            <div class="h-64 overflow-hidden relative">
+              <img alt="Rural Urban Skill Development Institute" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5f6wQpl-YXZfrieJ5EO9KyhuaGCRrkPKH1JV_6h5tk0rQXMT2Xkni5bD4Snks3peu05S2pBGSO6RUYyxj6jsJWNIip7DSv-3bcepYMGNqjBqTh65s1HLMJmhZkI44UXWXc_lMJnI31pIl7Kt_aJ3dsw90uzZI2dv-BBys7VJxkHzzzpV9Gs_7I0CVkg9LWsYGXdC6b6JawrZ4BhLF4shGBk4Qb9y0ZtZydsPIrppkHhz8U_wtvEI" />
+              <div class="absolute top-space-sm left-space-sm px-3 py-1 rounded-full bg-surface/80 backdrop-blur-[10px] border border-white/10 text-label-sm font-semibold text-primary">Skill Development</div>
+            </div>
+            <div class="p-space-md">
+              <h3 class="font-headline-sm text-on-surface mb-space-xs">Rural Urban Skill Development Institute</h3>
+              <p class="font-body-sm text-on-surface-variant mb-space-md">Institute Management ERP by Devender Kaushik</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 rounded bg-surface-container-high text-label-sm text-outline">TypeScript</span>
+                <span class="px-2 py-1 rounded bg-surface-container-high text-label-sm text-outline">Express</span>
+                <span class="px-2 py-1 rounded bg-surface-container-high text-label-sm text-outline">MySQL</span>
+              </div>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div class="rounded-2xl bg-surface-container/50 border border-white/10 backdrop-blur-[40px] overflow-hidden group shadow-[0_8px_32px_rgba(0,0,0,0.3)] cursor-pointer" onclick="openProject('rajiv')">
+            <div class="h-64 overflow-hidden relative">
+              <img alt="Rajiv Gandhi Computer Saksharta Mission" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB38zltnO6IKTsNbyUM0D7EFdWj9nIz5zFd_punVN7rTUut3cf4ybeF1p5R4gNZCCjTPC_zdrCIfrF44OdRELwWn8umD-AnfhK-zli9jnIuFub3q1DJaSgAdkqJbuiH_zm6WvMXWRMH4whUbQRbSUETJYJT6sWnCVj2iV0ixLsrZF6I6SBgauGevkaWopOvg4Wrqrwf05tk-0DRg4R2LF3smnjQOZ7bjxErzJcIz8_3ytnXUclxiuk" />
+              <div class="absolute top-space-sm left-space-sm px-3 py-1 rounded-full bg-surface/80 backdrop-blur-[10px] border border-white/10 text-label-sm font-semibold text-primary">Mission Portal</div>
+            </div>
+            <div class="p-space-md">
+              <h3 class="font-headline-sm text-on-surface mb-space-xs">Rajiv Gandhi Computer Saksharta Mission</h3>
+              <p class="font-body-sm text-on-surface-variant mb-space-md">Institute Landing Page by Dr. K. P. Singh</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 rounded bg-surface-container-high text-label-sm text-outline">Vue.js</span>
+                <span class="px-2 py-1 rounded bg-surface-container-high text-label-sm text-outline">PHP</span>
+                <span class="px-2 py-1 rounded bg-surface-container-high text-label-sm text-outline">MySQL</span>
+              </div>
+            </div>
+          </div>
+          <!-- Project 5 -->
+          <div class="rounded-2xl bg-surface-container/50 border border-white/10 backdrop-blur-[40px] overflow-hidden group shadow-[0_8px_32px_rgba(0,0,0,0.3)] cursor-pointer" onclick="openProject('macs')">
+            <div class="h-64 overflow-hidden relative">
+              <img alt="MACS Academy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBC6be5MACE2VdIs3gAG8AHJdW67mfjUZWaRVtlXdIeeUfS7OFq8CZnyY-EDeyI1k_GhJ2zmPJUiuRF42NpNMviBH-VqUYsM2VH_3eQ3rRpMKo98rwrk6db_mGQBELqDC9ukX1anwlRUL-wQBs9F5sHrGv-d5RnR2JuEzoIRqSrG6tjYatmCvZCTIunhgkt6duxbrR_jQe4i-fMsaldRGrqUS7OPrZorTrFrpYCmthGZZ1Jx1Fdus" />
+              <div class="absolute top-space-sm left-space-sm px-3 py-1 rounded-full bg-surface/80 backdrop-blur-[10px] border border-white/10 text-label-sm font-semibold text-primary">Academy LMS</div>
+            </div>
+            <div class="p-space-md">
+              <h3 class="font-headline-sm text-on-surface mb-space-xs">MACS Academy</h3>
+              <p class="font-body-sm text-on-surface-variant mb-space-md">Academy Website by Rajesh Kangra</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 rounded bg-surface-container-high text-label-sm text-outline">React</span>
+                <span class="px-2 py-1 rounded bg-surface-container-high text-label-sm text-outline">Firebase</span>
+                <span class="px-2 py-1 rounded bg-surface-container-high text-label-sm text-outline">Tailwind</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Performance Metrics Panel -->
+      <section class="py-space-xl bg-surface-container-lowest border-y border-white/5">
+        <div class="max-w-[1440px] mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-space-lg items-center">
+          <div>
+            <span class="text-label-md uppercase tracking-wider text-outline mb-space-xs block">Uncompromising Performance</span>
+            <h2 class="font-headline-lg text-on-surface mb-space-md">Engineered for Elite Core Web Vitals</h2>
+            <p class="font-body-lg text-on-surface-variant mb-space-lg">We don't just build websites; we engineer high-velocity digital assets that outperform competitors and dominate search algorithms.</p>
+            <div class="space-y-space-md">
+              <div class="flex items-start gap-space-sm">
+                <span class="material-symbols-outlined text-primary text-[24px]">check_circle</span>
+                <div>
+                  <h3 class="font-headline-sm text-on-surface">Sub-Second Load Times</h3>
+                  <p class="font-body-sm text-on-surface-variant">Instant rendering keeps bounce rates to an absolute minimum.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-space-sm">
+                <span class="material-symbols-outlined text-primary text-[24px]">check_circle</span>
+                <div>
+                  <h3 class="font-headline-sm text-on-surface">Advanced Schema &amp; Meta Architecture</h3>
+                  <p class="font-body-sm text-on-surface-variant">Structured data guarantees maximum visibility on Google search results.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-space-sm">
+                <span class="material-symbols-outlined text-primary text-[24px]">check_circle</span>
+                <div>
+                  <h3 class="font-headline-sm text-on-surface">Scalable ERP Architecture</h3>
+                  <p class="font-body-sm text-on-surface-variant">Easily handle thousands of concurrent users and complex transactions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-space-lg rounded-2xl bg-surface-container/50 border border-white/10 backdrop-blur-[40px] flex flex-col gap-space-lg shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <span class="font-headline-sm text-on-surface">Page Speed Score</span>
+                <span class="font-headline-sm text-primary font-bold">98/100</span>
+              </div>
+              <div class="w-full h-3 rounded-full bg-surface-container-high overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-primary-fixed to-primary w-[98%] rounded-full"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <span class="font-headline-sm text-on-surface">SEO Audit Score</span>
+                <span class="font-headline-sm text-primary font-bold">95/100</span>
+              </div>
+              <div class="w-full h-3 rounded-full bg-surface-container-high overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-primary-fixed to-primary w-[95%] rounded-full"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <span class="font-headline-sm text-on-surface">Platform Uptime</span>
+                <span class="font-headline-sm text-primary font-bold">99.9%</span>
+              </div>
+              <div class="w-full h-3 rounded-full bg-surface-container-high overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-primary-fixed to-primary w-[99.9%] rounded-full"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <span class="font-headline-sm text-on-surface">Conversion Growth</span>
+                <span class="font-headline-sm text-primary font-bold">+180%</span>
+              </div>
+              <div class="w-full h-3 rounded-full bg-surface-container-high overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-primary-fixed to-primary w-full rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Client Testimonials -->
+      <section class="py-space-xl max-w-[1440px] mx-auto px-gutter w-full">
+        <div class="text-center max-w-3xl mx-auto mb-space-lg">
+          <span class="text-label-md uppercase tracking-wider text-outline mb-space-xs block">Testimonials</span>
+          <h2 class="font-headline-lg text-on-surface mb-space-sm">Trusted by Industry Leaders</h2>
+          <p class="font-body-lg text-on-surface-variant">Hear what our clients have to say about our custom web and ERP solutions.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+          <!-- Testimonial 1 -->
+          <div class="p-space-lg rounded-2xl bg-surface-container/50 border border-white/10 backdrop-blur-[40px] flex flex-col justify-between shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+            <div>
+              <div class="flex gap-1 text-primary mb-space-md">
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              </div>
+              <p class="font-body-md text-on-surface-variant mb-space-lg">"Dhiman Codes transformed our inventory and library management completely. Their custom ERP solution is fast, robust, and incredibly easy for our staff to use daily."</p>
+            </div>
+            <div class="flex items-center gap-space-sm pt-space-md border-t border-white/5">
+              <div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface">DS</div>
+              <div>
+                <h4 class="font-headline-sm text-on-surface text-[16px]">Dixit Sharma</h4>
+                <span class="text-label-sm text-outline">Sakshit Electronics &amp; Library</span>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="p-space-lg rounded-2xl bg-surface-container/50 border border-white/10 backdrop-blur-[40px] flex flex-col justify-between shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+            <div>
+              <div class="flex gap-1 text-primary mb-space-md">
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              </div>
+              <p class="font-body-md text-on-surface-variant mb-space-lg">"The student management portal developed by Dhiman Codes streamlined our admissions and records effortlessly. Outstanding technical support and design."</p>
+            </div>
+            <div class="flex items-center gap-space-sm pt-space-md border-t border-white/5">
+              <div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface">AK</div>
+              <div>
+                <h4 class="font-headline-sm text-on-surface text-[16px]">Anil Kumar</h4>
+                <span class="text-label-sm text-outline">Bright Eyes Welfare Education Society</span>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="p-space-lg rounded-2xl bg-surface-container/50 border border-white/10 backdrop-blur-[40px] flex flex-col justify-between shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+            <div>
+              <div class="flex gap-1 text-primary mb-space-md">
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              </div>
+              <p class="font-body-md text-on-surface-variant mb-space-lg">"Professionalism and precision at its finest. Our vocational training institute platform runs impeccably with zero downtime. Highly recommended!"</p>
+            </div>
+            <div class="flex items-center gap-space-sm pt-space-md border-t border-white/5">
+              <div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface">DK</div>
+              <div>
+                <h4 class="font-headline-sm text-on-surface text-[16px]">Devender Kaushik</h4>
+                <span class="text-label-sm text-outline">Rural Urban Skill Development Institute</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cost Calculator Section -->
+      <section class="py-space-xl bg-surface-container-lowest border-y border-white/5" id="calculator">
+        <div class="max-w-[1440px] mx-auto px-gutter">
+          <div class="text-center max-w-3xl mx-auto mb-space-xl">
+            <span class="text-label-md uppercase tracking-wider text-outline mb-space-xs block">Instant Scoping</span>
+            <h2 class="font-headline-lg text-on-surface mb-space-sm">Interactive Project Cost Estimator</h2>
+            <p class="font-body-lg text-on-surface-variant">Configure your technical requirements to generate a transparent ballpark investment.</p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+            <div class="lg:col-span-7 bg-surface-container/50 p-space-lg rounded-2xl border border-white/10 space-y-space-md backdrop-blur-[40px]">
+              <div>
+                <label class="block text-label-md uppercase text-outline mb-2">1. Select Digital Architecture</label>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="arch-options">
+                  <button type="button" class="p-4 rounded-xl border border-white/30 bg-surface-container-high text-left cursor-pointer" onclick="setArch(65000, 'Custom ERP Portal', this)">
+                    <span class="font-headline-sm text-sm font-semibold text-on-surface block">Custom ERP Portal</span>
+                    <span class="text-label-sm text-outline">Starts ₹65,000</span>
+                  </button>
+                  <button type="button" class="p-4 rounded-xl border border-white/10 bg-surface-container-low text-left cursor-pointer" onclick="setArch(45000, 'Full-Stack Web App', this)">
+                    <span class="font-headline-sm text-sm font-semibold text-on-surface block">Full-Stack Web App</span>
+                    <span class="text-label-sm text-outline">Starts ₹45,000</span>
+                  </button>
+                </div>
+              </div>
+              <div>
+                <label class="block text-label-md uppercase text-outline mb-2">2. Add Specialized Capabilities</label>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  <label class="p-3 rounded-lg bg-surface-container-low border border-white/10 flex items-center justify-between text-xs cursor-pointer">
+                    <span class="flex items-center gap-2"><input type="checkbox" checked onchange="toggleCalc(12000, this)" class="accent-white"> Inventory Ledgers</span>
+                    <span class="font-label-sm text-outline">+₹12,000</span>
+                  </label>
+                  <label class="p-3 rounded-lg bg-surface-container-low border border-white/10 flex items-center justify-between text-xs cursor-pointer">
+                    <span class="flex items-center gap-2"><input type="checkbox" checked onchange="toggleCalc(10000, this)" class="accent-white"> GST Billing Engine</span>
+                    <span class="font-label-sm text-outline">+₹10,000</span>
+                  </label>
+                  <label class="p-3 rounded-lg bg-surface-container-low border border-white/10 flex items-center justify-between text-xs cursor-pointer">
+                    <span class="flex items-center gap-2"><input type="checkbox" onchange="toggleCalc(9000, this)" class="accent-white"> WhatsApp Dispatch</span>
+                    <span class="font-label-sm text-outline">+₹9,000</span>
+                  </label>
+                  <label class="p-3 rounded-lg bg-surface-container-low border border-white/10 flex items-center justify-between text-xs cursor-pointer">
+                    <span class="flex items-center gap-2"><input type="checkbox" onchange="toggleCalc(7000, this)" class="accent-white"> UPI Checkout</span>
+                    <span class="font-label-sm text-outline">+₹7,000</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-5 bg-surface-container/80 p-space-lg rounded-2xl border-2 border-white/20 backdrop-blur-[40px] shadow-[0_0_50px_rgba(255,255,255,0.08)]">
+              <span class="text-label-md uppercase tracking-wider text-outline block mb-2 font-semibold">Ballpark Estimate</span>
+              <div class="text-4xl sm:text-5xl font-bold font-label-md text-on-surface mb-2" id="calc-display">₹87,000</div>
+              <p class="text-body-sm text-outline mb-space-md">* Includes production deployment, testing &amp; 30-day warranty.</p>
+              <a href="#get-started" class="w-full h-12 rounded-xl bg-gradient-to-r from-primary-fixed to-primary text-on-primary font-body-md font-semibold flex items-center justify-center hover:opacity-90 shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-all">Lock This Scope &amp; Book Call &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Tiers -->
+      <section class="py-space-xl bg-surface-container-lowest border-y border-white/5" id="pricing">
+        <div class="max-w-[1440px] mx-auto px-gutter">
+          <div class="text-center max-w-3xl mx-auto mb-space-xl">
+            <span class="text-label-md uppercase tracking-wider text-outline mb-space-xs block">Investment Tiers</span>
+            <h2 class="font-headline-lg text-on-surface mb-space-sm">Transparent, Value-Driven Pricing</h2>
+            <p class="font-body-lg text-on-surface-variant">Choose the ideal tier to elevate your digital infrastructure.</p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md items-center">
+            <!-- Starter -->
+            <div class="p-space-lg rounded-2xl bg-surface-container/40 border border-white/15 backdrop-blur-[20px] flex flex-col justify-between">
+              <div>
+                <span class="text-label-md uppercase tracking-wider text-outline mb-space-xs block">Starter</span>
+                <h3 class="font-headline-md text-on-surface mb-space-xs">₹10,000</h3>
+                <p class="font-body-sm text-on-surface-variant mb-space-lg">Ideal for small businesses and portfolio websites looking for rapid online presence.</p>
+                <ul class="space-y-space-sm mb-space-lg font-body-sm text-on-surface-variant">
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check</span> Responsive Landing Page</li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check</span> Basic SEO Setup</li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check</span> Contact Form Integration</li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check</span> 7-Day Delivery</li>
+                </ul>
+              </div>
+              <a class="w-full h-12 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-body-md font-semibold flex items-center justify-center transition-all" href="#get-started">Get Started</a>
+            </div>
+            <!-- Professional -->
+            <div class="p-space-lg rounded-2xl bg-surface-container/80 border-2 border-primary/50 backdrop-blur-[40px] flex flex-col justify-between relative shadow-[0_0_50px_rgba(255,255,255,0.1)] scale-105 z-10">
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-on-primary font-headline-sm text-xs font-bold uppercase tracking-wider">Most Popular</div>
+              <div>
+                <span class="text-label-md uppercase tracking-wider text-primary mb-space-xs block">Professional</span>
+                <h3 class="font-headline-md text-on-surface mb-space-xs">₹55,000</h3>
+                <p class="font-body-sm text-on-surface-variant mb-space-lg">Custom web application or mid-scale ERP designed for ambitious growing brands.</p>
+                <ul class="space-y-space-sm mb-space-lg font-body-sm text-on-surface">
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check</span> Multi-Page Custom Web App</li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check</span> Advanced ERP / Management Portal</li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check</span> Comprehensive SEO &amp; Schema</li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check</span> Database &amp; Authentication Setup</li>
+                </ul>
+              </div>
+              <a class="w-full h-12 rounded-xl bg-gradient-to-r from-primary-fixed to-primary text-on-primary font-body-md font-semibold flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:opacity-90 transition-all" href="#get-started">Get Started</a>
+            </div>
+            <!-- Enterprise -->
+            <div class="p-space-lg rounded-2xl bg-surface-container/40 border border-white/15 backdrop-blur-[20px] flex flex-col justify-between">
+              <div>
+                <span class="text-label-md uppercase tracking-wider text-outline mb-space-xs block">Enterprise</span>
+                <h3 class="font-headline-md text-on-surface mb-space-xs">₹100,000+</h3>
+                <p class="font-body-sm text-on-surface-variant mb-space-lg">Full-scale enterprise digital infrastructure and dedicated ongoing engineering support.</p>
+                <ul class="space-y-space-sm mb-space-lg font-body-sm text-on-surface-variant">
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check</span> Custom Full-Stack Architecture</li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check</span> Advanced Workflow Automation</li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check</span> Dedicated Engineering Team</li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">check</span> 24/7 Priority SLA &amp; Security</li>
+                </ul>
+              </div>
+              <a class="w-full h-12 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-body-md font-semibold flex items-center justify-center transition-all" href="#get-started">Contact Sales</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Accordion -->
+      <section class="py-space-xl max-w-4xl mx-auto px-gutter w-full" id="faq">
+        <div class="text-center mb-space-xl">
+          <span class="text-label-md uppercase tracking-wider text-outline mb-space-xs block">Got Questions?</span>
+          <h2 class="font-headline-lg text-on-surface">Frequently Asked Questions</h2>
+        </div>
+        <div class="space-y-space-md">
+          <details class="group p-space-md rounded-xl bg-surface-container/50 border border-white/10 backdrop-blur-[20px] open:border-white/20 transition-all">
+            <summary class="font-headline-sm text-on-surface flex justify-between items-center cursor-pointer list-none">
+              <span>What is the typical project timeline?</span>
+              <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <p class="font-body-md text-on-surface-variant mt-3 leading-relaxed">Projects typically take 2 to 4 weeks depending on scope, features, and custom requirements. Landing pages take 7 days, whereas full ERP portals take 3 to 4 weeks.</p>
+          </details>
+          <details class="group p-space-md rounded-xl bg-surface-container/50 border border-white/10 backdrop-blur-[20px] open:border-white/20 transition-all">
+            <summary class="font-headline-sm text-on-surface flex justify-between items-center cursor-pointer list-none">
+              <span>What geographic regions do you cover?</span>
+              <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <p class="font-body-md text-on-surface-variant mt-3 leading-relaxed">We provide services Pan-India across all major states and cities, as well as remote international client support across the globe.</p>
+          </details>
+          <details class="group p-space-md rounded-xl bg-surface-container/50 border border-white/10 backdrop-blur-[20px] open:border-white/20 transition-all">
+            <summary class="font-headline-sm text-on-surface flex justify-between items-center cursor-pointer list-none">
+              <span>What is your core technology stack?</span>
+              <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <p class="font-body-md text-on-surface-variant mt-3 leading-relaxed">We build using modern robust technologies including React, Next.js, Node.js, Express, PostgreSQL, MySQL, and scalable cloud hosting.</p>
+          </details>
+          <details class="group p-space-md rounded-xl bg-surface-container/50 border border-white/10 backdrop-blur-[20px] open:border-white/20 transition-all">
+            <summary class="font-headline-sm text-on-surface flex justify-between items-center cursor-pointer list-none">
+              <span>What are your payment terms?</span>
+              <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <p class="font-body-md text-on-surface-variant mt-3 leading-relaxed">Our payment structure is 40% upfront, 30% mid-project milestone, and 30% final upon successful delivery and sign-off.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Final CTA & Footer Action Band -->
+      <section class="py-space-xl bg-surface-container-lowest border-t border-white/5 text-center relative overflow-hidden" id="get-started">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-gutter relative z-10">
+          <h2 class="font-headline-xl text-on-surface mb-space-md text-[36px] md:text-[48px]">Ready to Build Something Amazing?</h2>
+          <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-space-lg">Let’s engineer a high-converting web presence or custom ERP system that propels your brand ahead of the competition.</p>
+          <div class="flex flex-wrap items-center justify-center gap-space-sm mb-space-lg">
+            <a class="px-space-lg h-14 rounded-xl bg-gradient-to-r from-primary-fixed to-primary text-on-primary font-body-lg font-semibold flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(255,255,255,0.25)] hover:scale-105 transition-transform" href="https://wa.me/919876543210" target="_blank">
+              <span class="material-symbols-outlined text-[22px]">chat</span>
+              💬 Chat on WhatsApp
+            </a>
+            <a class="px-space-lg h-14 rounded-xl bg-surface-container-high/80 backdrop-blur-[20px] border border-white/10 text-on-surface font-body-lg font-semibold flex items-center justify-center gap-2 hover:bg-surface-container-highest transition-all" href="mailto:hello@dhimancodes.com">
+              <span class="material-symbols-outlined text-[22px]">mail</span>
+              📧 Send an Email
+            </a>
+          </div>
+
+          <!-- Proposal Contact Form -->
+          <form onsubmit="handleFormSubmit(event)" class="text-left bg-surface-container/60 p-space-lg rounded-2xl border border-white/10 space-y-4 backdrop-blur-[40px]">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-label-sm uppercase text-outline mb-1 font-semibold">Your Name *</label>
+                <input type="text" required class="w-full bg-surface-container-low border border-white/10 rounded-xl px-4 py-2.5 text-sm text-on-surface focus:outline-none focus:border-primary" placeholder="Dixit Sharma">
+              </div>
+              <div>
+                <label class="block text-label-sm uppercase text-outline mb-1 font-semibold">Email Address *</label>
+                <input type="email" required class="w-full bg-surface-container-low border border-white/10 rounded-xl px-4 py-2.5 text-sm text-on-surface focus:outline-none focus:border-primary" placeholder="dixit@example.com">
+              </div>
+            </div>
+            <div>
+              <label class="block text-label-sm uppercase text-outline mb-1 font-semibold">Project Requirements</label>
+              <textarea rows="3" class="w-full bg-surface-container-low border border-white/10 rounded-xl px-4 py-2.5 text-sm text-on-surface focus:outline-none focus:border-primary" placeholder="Describe your target requirements..."></textarea>
+            </div>
+            <button type="submit" class="w-full h-12 rounded-xl bg-gradient-to-r from-primary-fixed to-primary text-on-primary font-body-md font-semibold hover:opacity-90 transition-all cursor-pointer">Submit Project Request &rarr;</button>
+            <p id="form-success" class="text-xs text-emerald-400 text-center hidden font-mono">Proposal request received! We'll reply within 4 hours.</p>
+          </form>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Interactive Project Modal -->
+  <div id="project-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="bg-surface-container border border-white/20 rounded-2xl max-w-2xl w-full p-6 text-left relative">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-outline hover:text-white"><span class="material-symbols-outlined">close</span></button>
+      <h3 id="modal-title" class="text-2xl font-headline-sm font-bold text-on-surface mb-1"></h3>
+      <p id="modal-client" class="text-xs text-tertiary-fixed-dim font-label-md mb-4"></p>
+      <img id="modal-img" class="w-full h-56 object-cover rounded-xl mb-4" src="" alt="Project">
+      <p id="modal-desc" class="text-sm text-on-surface-variant leading-relaxed mb-6"></p>
+      <a href="#get-started" onclick="closeModal()" class="inline-flex px-5 py-2.5 rounded-xl bg-primary text-on-primary font-semibold text-xs">Request Similar Build &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="relative z-10 w-full bg-surface-container-lowest border-t border-white/5 pt-space-xl pb-space-lg">
+    <div class="max-w-[1440px] mx-auto px-gutter grid grid-cols-1 md:grid-cols-4 gap-space-lg mb-space-xl">
+      <div class="flex flex-col gap-space-sm">
+        <div class="flex items-center gap-space-sm">
+          <div class="w-6 h-6 rounded bg-primary flex items-center justify-center text-on-primary font-bold text-xs">D</div>
+          <span class="font-headline-sm font-bold tracking-tight text-on-surface">Dhiman Codes</span>
+        </div>
+        <p class="text-body-sm text-on-surface-variant max-w-xs">Elite digital infrastructure and custom ERP engineering for ambitious brands and enterprises.</p>
+      </div>
+      <div class="flex flex-col gap-space-sm">
+        <span class="text-label-md uppercase tracking-wider text-outline font-semibold">Navigation</span>
+        <a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#services">Services</a>
+        <a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#work">Work</a>
+        <a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#process">Process</a>
+        <a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#pricing">Pricing</a>
+      </div>
+      <div class="flex flex-col gap-space-sm">
+        <span class="text-label-md uppercase tracking-wider text-outline font-semibold">Resources</span>
+        <a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#faq">FAQ</a>
+        <a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#calculator">Cost Estimator</a>
+        <a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#work">Case Studies</a>
+      </div>
+      <div class="flex flex-col gap-space-sm">
+        <span class="text-label-md uppercase tracking-wider text-outline font-semibold">Connect</span>
+        <span class="text-body-sm text-on-surface-variant">hello@dhimancodes.com</span>
+        <span class="text-body-sm text-on-surface-variant">San Francisco &amp; Remote</span>
+      </div>
+    </div>
+    <div class="max-w-[1440px] mx-auto px-gutter pt-space-md border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-body-sm text-outline">
+      <p>© 2025 Dhiman Codes. All rights reserved.</p>
+      <div class="flex gap-space-md mt-space-sm sm:mt-0">
+        <a class="hover:text-on-surface transition-colors" href="#">Twitter</a>
+        <a class="hover:text-on-surface transition-colors" href="#">GitHub</a>
+        <a class="hover:text-on-surface transition-colors" href="#">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Typing Effect
+    const phrases = [
+      "Scale Effortlessly",
+      "Load Instantly",
+      "Drive Sales",
+      "Rank on Google"
+    ];
+    let currentPhraseIndex = 0;
+    let currentCharIndex = 0;
+    let isDeleting = false;
+    const typingElement = document.getElementById("typing-text");
+
+    function typeEffect() {
+      if (!typingElement) return;
+      const currentPhrase = phrases[currentPhraseIndex];
+      
+      if (isDeleting) {
+        typingElement.textContent = currentPhrase.substring(0, currentCharIndex - 1);
+        currentCharIndex--;
+      } else {
+        typingElement.textContent = currentPhrase.substring(0, currentCharIndex + 1);
+        currentCharIndex++;
+      }
+
+      let speed = isDeleting ? 45 : 90;
+
+      if (!isDeleting && currentCharIndex === currentPhrase.length) {
+        speed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && currentCharIndex === 0) {
+        isDeleting = false;
+        currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+        speed = 400;
+      }
+
+      setTimeout(typeEffect, speed);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(typeEffect, 1000);
+    });
+
+    // Interactive Calculator
+    let basePrice = 65000;
+    let addOns = 22000;
+
+    function setArch(price, name, el) {
+      basePrice = price;
+      document.querySelectorAll("#arch-options button").forEach(b => {
+        b.className = "p-4 rounded-xl border border-white/10 bg-surface-container-low text-left cursor-pointer";
+      });
+      el.className = "p-4 rounded-xl border border-white/30 bg-surface-container-high text-left cursor-pointer";
+      updateTotal();
+    }
+
+    function toggleCalc(val, cb) {
+      if (cb.checked) addOns += val;
+      else addOns -= val;
+      updateTotal();
+    }
+
+    function updateTotal() {
+      const total = basePrice + addOns;
+      document.getElementById("calc-display").textContent = "₹" + total.toLocaleString("en-IN");
+    }
+
+    // Project Modals
+    const projects = {
+      sakshit: {
+        title: "Sakshit Electronics & Library",
+        client: "Dixit Sharma · Retail ERP & POS",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCRWfwDt0EpebCXWTDJr3XzjAvy6uzHZw64nqI5KJQ5TtiBE4g4byrxfHJFnfHOeSYQsyMigF7db4wuloWUiBIIQU-7_XTvYtgEkcJuZtrDWFAMmUO2ynEu6rdP504FbXdpxCtpXVBTBy7YZ0WdXnHDQFpy4AzO8qmoAXjjKemv--oNkqrbU0lV5pjxQDMfaSmjVF_KX-HeA31vkflGDvlIodXCiB4fZYR0qWbQ6Lb5LPR-ZDblfv4",
+        desc: "High-throughput enterprise resource planning suite for Sakshit Electronics & Library with real-time multi-warehouse inventory, POS barcode billing, thermal receipt generation, and offline-first cache."
+      },
+      bright: {
+        title: "Bright Eyes Welfare Education Society",
+        client: "Anil Kumar · Education Foundation",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYluS_oYRpCCEad6wxIggn8THzzVYoIKmCdPEB-NBBtv3NJG44QVNV_F6FnK3T25ZuP78ulyEEQMQCYI13tojnaZS23qr-mwIuy6RiHnzI6QOKFcV-V_B8mjfOwxrq8RofU0nhEmXZ_GMvLd6tdei0YoSqcrLK7JvOPnmiY947aP3Q_bLM1KPFvyprAm9Ox3kwKvj6fcOsQDvd52UnGtq-zKSG1YiiAyQX9s9EV3Ngu5rmuhzCmzM",
+        desc: "Comprehensive educational foundation portal and digital management system facilitating student admissions, digital certificate verification, and donor ledgers."
+      },
+      rural: {
+        title: "Rural Urban Skill Development Institute",
+        client: "Devender Kaushik · 28 Skill Centers",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuA5f6wQpl-YXZfrieJ5EO9KyhuaGCRrkPKH1JV_6h5tk0rQXMT2Xkni5bD4Snks3peu05S2pBGSO6RUYyxj6jsJWNIip7DSv-3bcepYMGNqjBqTh65s1HLMJmhZkI44UXWXc_lMJnI31pIl7Kt_aJ3dsw90uzZI2dv-BBys7VJxkHzzzpV9Gs_7I0CVkg9LWsYGXdC6b6JawrZ4BhLF4shGBk4Qb9y0ZtZydsPIrppkHhz8U_wtvEI",
+        desc: "National vocational skill institute ERP automating student batch allocations, roll-number generators, examination hall tickets, and multi-branch consoles."
+      },
+      rajiv: {
+        title: "Rajiv Gandhi Computer Saksharta Mission",
+        client: "Dr. K. P. Singh · National Mission",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuB38zltnO6IKTsNbyUM0D7EFdWj9nIz5zFd_punVN7rTUut3cf4ybeF1p5R4gNZCCjTPC_zdrCIfrF44OdRELwWn8umD-AnfhK-zli9jnIuFub3q1DJaSgAdkqJbuiH_zm6WvMXWRMH4whUbQRbSUETJYJT6sWnCVj2iV0ixLsrZF6I6SBgauGevkaWopOvg4Wrqrwf05tk-0DRg4R2LF3smnjQOZ7bjxErzJcIz8_3ytnXUclxiuk",
+        desc: "National franchise locator, curriculum downloads with digital watermarking, and instant certificate verification for over 80,000 monthly students."
+      },
+      macs: {
+        title: "MACS Academy",
+        client: "Rajesh Kangra · Academy LMS",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCBC6be5MACE2VdIs3gAG8AHJdW67mfjUZWaRVtlXdIeeUfS7OFq8CZnyY-EDeyI1k_GhJ2zmPJUiuRF42NpNMviBH-VqUYsM2VH_3eQ3rRpMKo98rwrk6db_mGQBELqDC9ukX1anwlRUL-wQBs9F5sHrGv-d5RnR2JuEzoIRqSrG6tjYatmCvZCTIunhgkt6duxbrR_jQe4i-fMsaldRGrqUS7OPrZorTrFrpYCmthGZZ1Jx1Fdus",
+        desc: "Online practice exam portal with timed tests, instant ranking analytics, and automated batch fee reminders."
+      }
+    };
+
+    function openProject(id) {
+      const p = projects[id];
+      if (!p) return;
+      document.getElementById("modal-title").textContent = p.title;
+      document.getElementById("modal-client").textContent = p.client;
+      document.getElementById("modal-img").src = p.img;
+      document.getElementById("modal-desc").textContent = p.desc;
+      const modal = document.getElementById("project-modal");
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    function closeModal() {
+      const modal = document.getElementById("project-modal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      document.getElementById("form-success").classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
